@@ -1,0 +1,56 @@
+//
+// Prefix header for all source files of the 'Syntax' target in the 'Syntax' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+//IAP macros
+#define IAP_FULL_VERSION @"com.zombie.match.remove_banner_ad"
+#define IAP_ADD_BACKGROUNDS @"com.zombie.match.add_backgrounds"
+#define IAP_500_BYTES_PACK @"com.zombie.match.500bytespack"
+#define IAP_1000_BYTES_PACK @"com.zombie.match.1000bytespack"
+#define IAP_3000_BYTES_PACK @"com.zombie.match.3000bytespack"
+#define IAP_7500_BYTES_PACK @"com.zombie.match.7500bytespack"
+#define IAP_20000_BYTES_PACK @"com.zombie.match.20000bytespack"
+#define IAP_50000_BYTES_PACK @"com.zombie.match.50000bytespack"
+
+#define supportEmail @"keithkorneluk@gmail.com"
+
+#define rateLink @"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=719612502&onlyLatestVersion=false&type=Purple+Software"
+
+#define kMoreBackgroundIAPCancelled @"BackgroundIAPCancelled"
+#define kMoreBackgroundIAPBought @"BackgroundIAPBought"
+
+#define IS_WIDESCREEN ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+#define IS_IPHONE ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone )
+#define IS_IPHONE_5 ( IS_IPHONE && IS_WIDESCREEN )
+
+#define kPlayHavenID @"4914863f462644c594b8ed60eb5afff7"
+#define kPlayHeavenSecret @"ab344ae63bec4627ab454bfd07890871"
+
+#define TestFlight_ID @"e45e2f1b-974d-41a0-8687-8d3f709d22a1"
+
+#define RevMobID @"524c61bdd17d6857de0000a8"
+
+#define Flurry_ID @"9K3CRNDZTSQ2684MXNY7"
+
+#define TapJoy_ID @"7d69cc94-9bb2-4499-9eb8-0bd8345b0e7e"
+#define TapJoySecret @"ekSYZx1ZMW1WnapjdbBn"
+
+#define ChartBoost_ID @"524c624217ba47562d000001"
+#define ChartBosst_Sign @"982de533cf22ad360a10a4171b8a094a4ed920e5"
+//#define USE_TESTFLIGHT //comment it on release
+
+#ifdef USE_TESTFLIGHT
+#import "TestFlight.h"
+#define NSLog TFLog
+#endif
